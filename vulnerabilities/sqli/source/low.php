@@ -2,8 +2,7 @@
 
 if( isset( $_REQUEST[ 'Submit' ] ) ) {
 	// Get the input
-	// $id = $_REQUEST[ 'id' ];
-	$id = "ID";
+	$id = $_REQUEST[ 'id' ];
 
 	switch ($_DVWA['SQLI_DB']) {
 		case MYSQL:
