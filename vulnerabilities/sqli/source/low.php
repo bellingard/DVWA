@@ -26,9 +26,6 @@ if( isset( $_REQUEST[ 'Submit' ] ) ) {
 		case SQLITE:
 			global $sqlite_db_connection;
 
-			#$sqlite_db_connection = new SQLite3($_DVWA['SQLITE_DB']);
-			#$sqlite_db_connection->enableExceptions(true);
-
 			$query  = "SELECT first_name, last_name FROM users WHERE user_id = '$id';";
 			try {
 				$results = $sqlite_db_connection->query($query);
@@ -49,6 +46,8 @@ if( isset( $_REQUEST[ 'Submit' ] ) ) {
 			} else {
 				echo "Error in fetch ".$sqlite_db->lastErrorMsg();
 			}
+			break;
+		default:
 			break;
 	} 
 }
