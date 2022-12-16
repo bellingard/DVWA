@@ -1,7 +1,7 @@
 <?php
 
 if( isset( $_REQUEST[ 'Submit' ] ) ) {
-	// Get input
+	// Get the input
 	// $id = $_REQUEST[ 'id' ];
 	$id = "ID";
 
